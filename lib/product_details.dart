@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:navigation_exercise/product.dart';
 
 class ProductDetails extends StatelessWidget {
-  final List<Product> products;
+  final Product selectedProduct;
 
-  const ProductDetails({required this.products, Key? key}) : super(key: key);
+  const ProductDetails({required this.selectedProduct, Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +14,21 @@ class ProductDetails extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              // const SizedBox(height: 20),
-              // Text(
-              //   shirt.title,
-              //   style: const TextStyle(fontSize: 35),
-              // ),
-              // const SizedBox(height: 30),
-              // Text(shirt.description),
-              // Text("Preis: ${shirt.price.toStringAsFixed(2)}"),
+              const Spacer(),
+              Text(
+                selectedProduct.title,
+                style: const TextStyle(fontSize: 35),
+              ),
+              const Spacer(),
+              Text(selectedProduct.description),
+              Text("Preis: ${selectedProduct.price.toString()}"),
+              const Spacer(),
               BackButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
               ),
+              const Spacer(),
             ],
           ),
         ));

@@ -27,25 +27,17 @@ class ProductScreen extends StatelessWidget {
                   ),
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  // MaterialPageRoute(
-                  //   builder: (context) =>
-                  //       ProductDetails(products: products[index]),
-                  // ),
-                  //   );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ProductDetails(selectedProduct: products[index]),
+                    ),
+                  );
                 },
               ),
             );
           }),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => ProductDetails(products: products)));
-          },
-          child: const Icon(Icons.account_tree_outlined)),
     );
   }
 }
