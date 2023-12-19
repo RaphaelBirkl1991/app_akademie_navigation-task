@@ -21,6 +21,11 @@ class ProductDetails extends StatelessWidget {
               const SizedBox(height: 30),
               Text(shirt.description),
               Text("Preis: ${shirt.price.toStringAsFixed(2)}"),
+              BackButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ],
           ),
         ));
