@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_exercise/product.dart';
 
 class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+  final Product shirt;
+
+  const ProductDetails({required this.shirt, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Details zu Hemd")),
-        body: const Center(
+        body: Center(
           child: Column(
             children: [
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
-                "Hemd",
-                style: TextStyle(fontSize: 35),
+                shirt.name,
+                style: const TextStyle(fontSize: 35),
               ),
-              SizedBox(height: 30),
-              Text("Ein Hemd das wirklich gut passt"),
-              Text("Preis: 49,90 Euro"),
+              const SizedBox(height: 30),
+              Text(shirt.description),
+              Text("Preis: ${shirt.price.toStringAsFixed(2)}"),
             ],
           ),
         ));
