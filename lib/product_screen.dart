@@ -16,9 +16,16 @@ class ProductScreen extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return Card(
               child: ListTile(
-                leading: Icon(Icons.shopping_bag),
+                leading: const Icon(Icons.shopping_bag),
                 title: Text(products[index].title),
                 subtitle: Text(products[index].description),
+                trailing: Text(
+                  products[index].price.toString(),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   // Navigator.push(
                   //   context,
