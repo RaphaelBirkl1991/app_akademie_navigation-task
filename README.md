@@ -1,3 +1,5 @@
 # navigation_exercise
 
-A new Flutter project.
+![app-akademie-logo](app_akademie_logo.png)
+
+## First lesson to learn about navigation in Flutter  
