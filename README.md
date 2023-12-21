@@ -5,7 +5,7 @@
 
 ## First lesson to learn about navigation in Flutter.
 
-## The final app screen 
+## The final app screen: 
 
 ![first screenshot](screenshot-01.png)
 ![secons-screenshot](screenshot-02.png)
