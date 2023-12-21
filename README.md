@@ -1,4 +1,4 @@
-# navigation exercise         
+# Navigation Exercise.              
 
 
 ![app-akademie-logo](app_akademie_logo.png)
